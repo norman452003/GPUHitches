@@ -73,7 +73,8 @@
         _shadow1View.layer.cornerRadius = 4.0;
         _shadow1View.layer.shadowRadius = 4.0;
         _shadow1View.layer.shadowOpacity = 0.7;
-//        _shadow1View.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 20) cornerRadius:4.0].CGPath;
+        //阴影增加path设置后离屏渲染就没有了
+        _shadow1View.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 20) cornerRadius:4.0].CGPath;
         
     }
     return _shadow1View;
@@ -88,8 +89,9 @@
         _shadow2View.layer.cornerRadius = 4.0;
         _shadow2View.layer.shadowRadius = 4.0;
         _shadow2View.layer.shadowOpacity = 0.7;
-//        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:_shadow2View.bounds cornerRadius:4.0];
-//        _shadow2View.layer.shadowPath = path.CGPath;
+        //阴影增加path设置后离屏渲染就没有了
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:_shadow2View.bounds cornerRadius:4.0];
+        _shadow2View.layer.shadowPath = path.CGPath;
         
     }
     return _shadow2View;
