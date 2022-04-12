@@ -73,7 +73,8 @@
         _shadow1View.layer.cornerRadius = 4.0;
         _shadow1View.layer.shadowRadius = 4.0;
         _shadow1View.layer.shadowOpacity = 0.7;
-        //阴影增加path设置后离屏渲染就没有了
+#warning 注意这块
+        //阴影增加path设置后离屏渲染就没有了  下面代码注释运行即可感受明显卡顿
         _shadow1View.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 100, 20) cornerRadius:4.0].CGPath;
         
     }
@@ -89,7 +90,8 @@
         _shadow2View.layer.cornerRadius = 4.0;
         _shadow2View.layer.shadowRadius = 4.0;
         _shadow2View.layer.shadowOpacity = 0.7;
-        //阴影增加path设置后离屏渲染就没有了
+#warning 注意这块
+        //阴影增加path设置后离屏渲染就没有了  下面代码注释运行即可感受明显卡顿
         UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:_shadow2View.bounds cornerRadius:4.0];
         _shadow2View.layer.shadowPath = path.CGPath;
         
